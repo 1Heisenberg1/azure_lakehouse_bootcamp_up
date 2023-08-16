@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-upds-japa-dev-m2f"
+		},
+		"ds_adls_csv_accountKey": {
+			"value": ""
+		},
+		"ADLSLinkedService_properties_typeProperties_url": {
+			"value": "https://dlsupdsjapadevj8u.dfs.core.windows.net/"
+		},
+		"ds_adls_csv_properties_typeProperties_url": {
+			"value": "https://dlsupdsjapadevj8u.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
