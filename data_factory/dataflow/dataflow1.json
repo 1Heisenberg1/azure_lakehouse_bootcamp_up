@@ -1,0 +1,27 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"folder": {
+			"name": "ProcessBusiness"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_adls_csv_target",
+						"type": "DatasetReference"
+					},
+					"name": "sourceShredKnow"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> sourceShredKnow"
+			]
+		}
+	}
+}
