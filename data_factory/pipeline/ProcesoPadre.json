@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "pipeline2",
+						"referenceName": "ProcesoRaw",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
