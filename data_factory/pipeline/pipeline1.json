@@ -81,7 +81,12 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"sourceShredKnow": {
+								"filename": "badges"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
