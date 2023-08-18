@@ -1,0 +1,38 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "lista_archivos",
+					"value": [
+						"comments",
+						"users",
+						"linktypes"
+					]
+				}
+			}
+		],
+		"concurrency": 1,
+		"variables": {
+			"lista_archivos": {
+				"type": "Array",
+				"defaultValue": [
+					"HolaMundo"
+				]
+			}
+		},
+		"folder": {
+			"name": "01_raw_sharedknow"
+		},
+		"annotations": []
+	}
+}
