@@ -16,11 +16,22 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "AddAuditColumns"
+				}
+			],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          Id as integer,",
+				"          Name as string,",
+				"          UserId as integer,",
+				"          Date as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> sourceShredKnow"
+				"     ignoreNoFilesFound: false) ~> sourceShredKnow",
+				"sourceShredKnow derive(processdata = currentDate()) ~> AddAuditColumns"
 			]
 		}
 	}
