@@ -19,6 +19,9 @@
 			"transformations": [
 				{
 					"name": "AddAuditColumns"
+				},
+				{
+					"name": "filter1UserIdMayor1000"
 				}
 			],
 			"scriptLines": [
@@ -31,7 +34,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> sourceShredKnow",
-				"sourceShredKnow derive(processdata = currentDate()) ~> AddAuditColumns"
+				"sourceShredKnow derive(processdata = currentDate()) ~> AddAuditColumns",
+				"AddAuditColumns filter(UserId>1000) ~> filter1UserIdMayor1000"
 			]
 		}
 	}
